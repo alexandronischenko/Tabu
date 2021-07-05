@@ -56,15 +56,47 @@
 		A2C173CB26936FA800FBD8EC /* Tabu */ = {
 			isa = PBXGroup;
 			children = (
+				A2C173E026936FC600FBD8EC /* MainScreen */,
+				A2C173E226936FF500FBD8EC /* SettingsScreen */,
+				A2C173E32693701600FBD8EC /* GameScreen */,
+				A2C173E42693702300FBD8EC /* ResultScreen */,
 				A2C173CC26936FA800FBD8EC /* AppDelegate.swift */,
 				A2C173CE26936FA800FBD8EC /* SceneDelegate.swift */,
-				A2C173D026936FA800FBD8EC /* ViewController.swift */,
-				A2C173D226936FA800FBD8EC /* Main.storyboard */,
 				A2C173D526936FA900FBD8EC /* Assets.xcassets */,
 				A2C173D726936FA900FBD8EC /* LaunchScreen.storyboard */,
 				A2C173DA26936FA900FBD8EC /* Info.plist */,
 			);
 			path = Tabu;
+			sourceTree = "<group>";
+		};
+		A2C173E026936FC600FBD8EC /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A2C173D026936FA800FBD8EC /* ViewController.swift */,
+				A2C173D226936FA800FBD8EC /* Main.storyboard */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		A2C173E226936FF500FBD8EC /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		A2C173E32693701600FBD8EC /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		A2C173E42693702300FBD8EC /* ResultScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResultScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tabu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITIS.Tabu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tabu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITIS.Tabu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
