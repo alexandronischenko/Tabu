@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Bachelorette-Taboo-Ladylike-Design-The-Craftables-Themed-Card-Games-for-ladies-night-customised-games.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
