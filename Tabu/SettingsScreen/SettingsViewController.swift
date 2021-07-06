@@ -44,9 +44,9 @@ class SettingsViewController: UIViewController {
 //            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
 //
 // MARK: - Data transfer
-//            gameViewController.FirstName = FirstPlayerNameField.text
-//            gameViewController.SecondName = SecondPlayerNameField.text
-//            gameViewController.Time = TimeForGameInSeconds.text
+//            gameViewController.player1Name = FirstPlayerNameField.text
+//            gameViewController.player2Name = SecondPlayerNameField.text
+//            gameViewController.playerTime = TimeForGameInSeconds.text
 //
 //            navigationController?.pushViewController(GameViewController , animated: true)
         }
