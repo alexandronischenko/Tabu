@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20828ED26941E3A00290EC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20828EC26941E3A00290EC4 /* SettingsViewController.swift */; };
 		74B37B202697196900FA8694 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B37B1F2697196900FA8694 /* ResultViewController.swift */; };
 		A27138B42693861E00407B52 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27138B32693861E00407B52 /* InfoViewController.swift */; };
 		A2C173CD26936FA800FBD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C173CC26936FA800FBD8EC /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A20828EC26941E3A00290EC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		74B37B1F2697196900FA8694 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		A27138B32693861E00407B52 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A2C173C926936FA800FBD8EC /* Tabu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A2C173ED2693739300FBD8EC /* SettingsStoryboard.storyboard */,
+				A20828EC26941E3A00290EC4 /* SettingsViewController.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				A2C173CD26936FA800FBD8EC /* AppDelegate.swift in Sources */,
 				A27138B42693861E00407B52 /* InfoViewController.swift in Sources */,
 				A2C173CF26936FA800FBD8EC /* SceneDelegate.swift in Sources */,
+				A20828ED26941E3A00290EC4 /* SettingsViewController.swift in Sources */,
 				74B37B202697196900FA8694 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
