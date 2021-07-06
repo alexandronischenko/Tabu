@@ -37,51 +37,43 @@
                                 <rect key="frame" x="95" y="164" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-rg-NRw">
-                                <rect key="frame" x="85" y="372" width="220" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HC-fi-QIm">
+                                <rect key="frame" x="105" y="504" width="180" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-Gs-CbL">
-                                        <rect key="frame" x="74" y="20" width="73" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXR-We-sLb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.41176474089999998" green="0.49803921579999999" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wn-fs-Lbt">
-                                <rect key="frame" x="110" y="498" width="170" height="80"/>
+                                <color key="backgroundColor" red="0.25283230815100999" green="0.34113532753055775" blue="0.56499677837835049" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="How to play?">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="howToPlayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ava-hd-5Zr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsM-Ez-KBK">
+                                <rect key="frame" x="90" y="372" width="210" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qy-Uc-XgU">
-                                        <rect key="frame" x="29" y="22" width="113" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="How to play?">
-                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="howToPlayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4F-vK-lzp"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.41176474089999998" green="0.49803921579999999" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
+                                <color key="backgroundColor" red="0.22843463145983495" green="0.31758276634732413" blue="0.51503518197525766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujp-Rh-zVj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tabu" id="t48-Sk-pNq"/>
+                    <connections>
+                        <outlet property="howToPlayButton" destination="0HC-fi-QIm" id="Nr2-1P-9Ef"/>
+                        <outlet property="playButton" destination="bsM-Ez-KBK" id="EAs-h6-fOz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="101"/>
+            <point key="canvasLocation" x="61.538461538461533" y="100.94786729857819"/>
         </scene>
         <!--Rules-->
         <scene sceneID="KbD-q7-FOK">
@@ -97,8 +89,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">An even number of players from four to ten sit alternating around in a circle. Players take turns as the "giver", who attempts to prompt their teammates to guess as many keywords as possible in the allotted time. However, each card also has "taboo" (forbidden) words listed which may not be spoken. Should the giver say one, a "censor" on the opposing team hits the buzzer and the giver must move on to the next word. For example, the giver might have to get their team to deduce the word "baseball" without offering the words "sport", "game", "pastime", "hitter", "pitcher", or "baseball" itself as clues. The giver may not say a part of a "taboo" word;[4] for example, using "base" in "baseball" is taboo. Nor may they use a form of a word; for example, if the word was "wedding" and the taboo words are "marriage", "bride", "groom", "nuptials", or "honeymoon", the words "marry" and "bridal" would not be allowed. The giver may only use speech to prompt their teammates; gestures, sounds (e.g. barking), or drawings are not allowed. Singing is permitted, provided the singer is singing words rather than humming or whistling a tune. The giver's hints may rhyme with a taboo word, or be an abbreviation of a taboo word.
-While the giver is prompting the teammates they may make as many guesses as they want with no penalties for wrong guesses. Once the team correctly guesses the word exactly as written on the card, the giver moves on to the next word, trying to get as many words as possible in the allotted time. When time runs out, play passes to the next adjacent player of the other team. The playing team receives one point for correct guesses and one penalty point if "taboo" words are spoken.</mutableString>
+                                        <string key="content">An even number of players from four to ten sit alternating around in a circle. Players take turns as the "giver", who attempts to prompt their teammates to guess as many keywords as possible in the allotted time. However, each card also has "taboo" (forbidden) words listed which may not be spoken. Should the giver say one, a "censor" on the opposing team hits the buzzer and the giver must move on to the next word. For example, the giver might have to get their team to deduce the word "baseball" without offering the words "sport", "game", "pastime", "hitter", "pitcher", or "baseball" itself as clues. The giver may not say a part of a "taboo" word;[4] for example, using "base" in "baseball" is taboo. Nor may they use a form of a word; for example, if the word was "wedding" and the taboo words are "marriage", "bride", "groom", "nuptials", or "honeymoon", the words "marry" and "bridal" would not be allowed. The giver may only use speech to prompt their teammates; gestures, sounds (e.g. barking), or drawings are not allowed. Singing is permitted, provided the singer is singing words rather than humming or whistling a tune. The giver's hints may rhyme with a taboo word, or be an abbreviation of a taboo word.
+While the giver is prompting the teammates they may make as many guesses as they want with no penalties for wrong guesses. Once the team correctly guesses the word exactly as written on the card, the giver moves on to the next word, trying to get as many words as possible in the allotted time. When time runs out, play passes to the next adjacent player of the other team. The playing team receives one point for correct guesses and one penalty point if "taboo" words are spoken.</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="14" name="MarkerFelt-Thin"/>
@@ -121,13 +113,25 @@ While the giver is prompting the teammates they may make as many guesses as they
             </objects>
             <point key="canvasLocation" x="746" y="101"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VRP-L0-sCO">
+            <objects>
+                <viewController id="UMy-jS-kSL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v7c-Da-kyw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uSI-DK-rpC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58A-7N-Skx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="101"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bachelorette-Taboo-Ladylike-Design-The-Craftables-Themed-Card-Games-for-ladies-night-customised-games" width="750" height="750"/>
         <image name="logoForMainScreen" width="1024" height="1024"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
