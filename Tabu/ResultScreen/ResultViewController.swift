@@ -10,11 +10,20 @@ import UIKit
 class ResultViewController: UIViewController {
     
     
+    var score1: Int?
+    var score2: Int?
+    var name1: String?
+    var name2: String?
+    
+   
     @IBOutlet weak var okButton: UIButton!
+    
+    @IBOutlet weak var winnerView: UIView!
+    
+    @IBOutlet weak var winnerNameLabel: UILabel!
     
     @IBOutlet weak var winnerStatusLabel: UILabel!
     
-    @IBOutlet weak var winnerNameLabel: UILabel!
     
     @IBOutlet weak var name1Label: UILabel!
     
@@ -24,33 +33,38 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var score2Label: UILabel!
     
-    init(name1: String, name2: String, score1: Int, score2: Int) {
-        if score1 > score2 {
-            winnerNameLabel.text = name1
-        } else if score1 == score2 {
-            winnerStatusLabel.text = "Ничья"
-            winnerNameLabel.text = nil
-        } else {
-            winnerNameLabel.text = name2
-        }
-        name1Label.text = name1
-        score1Label.text = String(score1)
-        name2Label.text = name2
-        score2Label.text = String(score2)
-        super.init(nibName: nil, bundle: nil)
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if score1! > score2! {
+            winnerNameLabel.text = name1!
+        } else if score1! == score2! {
+            winnerStatusLabel.text = "Ничья"
+            winnerNameLabel.text = nil
+        } else {
+            winnerNameLabel.text = name2!
+        }
+        name1Label.text = name1!
+        score1Label.text = String(score1!)
+        name2Label.text = name2!
+        score2Label.text = String(score2!)
 
+    }
+    
+    
+    @IBAction func pressOkButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
