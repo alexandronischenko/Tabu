@@ -20,8 +20,20 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        PlayButton.layer.cornerRadius = 25
         ViewSettings.layer.cornerRadius = 25
+        ViewSettings.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        ViewSettings.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        ViewSettings.layer.shadowOpacity = 1.0
+        ViewSettings.layer.shadowRadius = 0.0
+        ViewSettings.layer.masksToBounds = false
+        
+        
+        PlayButton.layer.cornerRadius = 25
+        PlayButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        PlayButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        PlayButton.layer.shadowOpacity = 1.0
+        PlayButton.layer.shadowRadius = 0.0
+        PlayButton.layer.masksToBounds = false
         // Do any additional setup after loading the view.
     }
     
