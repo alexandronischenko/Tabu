@@ -16,6 +16,8 @@ class ResultViewController: UIViewController {
     var name2: String?
     
    
+    @IBOutlet weak var okView: UIView!
+    
     @IBOutlet weak var okButton: UIButton!
     
     @IBOutlet weak var winnerView: UIView!
@@ -38,6 +40,10 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeShadow(view: okView)
+        makeShadow(view: winnerView)
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -63,6 +69,13 @@ class ResultViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    private func makeShadow(view: UIView) {
+        view.layer.shadowOffset = CGSize.init(width: 0, height: 3)
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowRadius = 10.0
+        view.layer.shadowOpacity = 0.4
     }
     
     /*

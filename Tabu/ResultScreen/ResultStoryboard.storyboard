@@ -76,6 +76,11 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.41263729329999999" green="0.49944931269999998" blue="0.77519446609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.41263729329999999" green="0.49944931269999998" blue="0.77519446609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="winnerNameLabel" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muv-yH-YFr">
                                         <rect key="frame" x="246" y="120" width="112" height="29"/>
@@ -96,6 +101,11 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2284266173" green="0.30782638470000001" blue="0.62463756439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -105,6 +115,7 @@
                         <outlet property="name1Label" destination="Gms-qG-Hcl" id="UBi-of-2mD"/>
                         <outlet property="name2Label" destination="NLj-Xx-wA6" id="blF-jt-rZo"/>
                         <outlet property="okButton" destination="cgI-mX-o45" id="q5t-Ad-9in"/>
+                        <outlet property="okView" destination="HIn-1O-EeY" id="P3Q-Bf-NRj"/>
                         <outlet property="score1Label" destination="Pi0-zR-cWX" id="yX0-ex-960"/>
                         <outlet property="score2Label" destination="axS-hc-KfP" id="SnE-fM-nT2"/>
                         <outlet property="winnerNameLabel" destination="Muv-yH-YFr" id="aLd-fi-C31"/>
