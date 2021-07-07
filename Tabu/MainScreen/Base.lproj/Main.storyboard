@@ -73,65 +73,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.538461538461533" y="100.94786729857819"/>
+            <point key="canvasLocation" x="66" y="101"/>
         </scene>
-        <!--Rules-->
+        <!--Info View Controller-->
         <scene sceneID="KbD-q7-FOK">
             <objects>
-                <viewController storyboardIdentifier="InfoViewController" title="Rules" id="ERl-CM-tzU" customClass="InfoViewController" customModule="Tabu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="ERl-CM-tzU" customClass="InfoViewController" customModule="Tabu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eTa-tJ-Lzr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-Kd-gI6">
-                                <rect key="frame" x="16" y="344" width="358" height="466"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tM-3O-ccg">
+                                <rect key="frame" x="259" y="676" width="115" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">An even number of players from four to ten sit alternating around in a circle. Players take turns as the "giver", who attempts to prompt their teammates to guess as many keywords as possible in the allotted time. However, each card also has "taboo" (forbidden) words listed which may not be spoken. Should the giver say one, a "censor" on the opposing team hits the buzzer and the giver must move on to the next word. For example, the giver might have to get their team to deduce the word "baseball" without offering the words "sport", "game", "pastime", "hitter", "pitcher", or "baseball" itself as clues. The giver may not say a part of a "taboo" word;[4] for example, using "base" in "baseball" is taboo. Nor may they use a form of a word; for example, if the word was "wedding" and the taboo words are "marriage", "bride", "groom", "nuptials", or "honeymoon", the words "marry" and "bridal" would not be allowed. The giver may only use speech to prompt their teammates; gestures, sounds (e.g. barking), or drawings are not allowed. Singing is permitted, provided the singer is singing words rather than humming or whistling a tune. The giver's hints may rhyme with a taboo word, or be an abbreviation of a taboo word.
-While the giver is prompting the teammates they may make as many guesses as they want with no penalties for wrong guesses. Once the team correctly guesses the word exactly as written on the card, the giver moves on to the next word, trying to get as many words as possible in the allotted time. When time runs out, play passes to the next adjacent player of the other team. The playing team receives one point for correct guesses and one penalty point if "taboo" words are spoken.</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="MarkerFelt-Thin"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bachelorette-Taboo-Ladylike-Design-The-Craftables-Themed-Card-Games-for-ladies-night-customised-games" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-kL-405">
-                                <rect key="frame" x="16" y="88" width="358" height="248"/>
+                                <color key="backgroundColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="ERl-CM-tzU" eventType="touchUpInside" id="qQd-gY-T2I"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabooLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wz2-bw-Ufz">
+                                <rect key="frame" x="60" y="166" width="270" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uM0-dv-BLz">
+                                <rect key="frame" x="16" y="676" width="115" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousAction:" destination="ERl-CM-tzU" eventType="touchUpInside" id="eHt-l0-Z6N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-qa-vKb">
+                                <rect key="frame" x="16" y="602" width="358" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-jU-Uif">
+                                <rect key="frame" x="16" y="44" width="358" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxL-ZB-Nms">
+                                        <rect key="frame" x="0.0" y="2" width="358" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXg-Vq-RKZ">
+                                <rect key="frame" x="16" y="362" width="358" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Overview: 
+Taboo is a verbal game played with two teams of three players or more, a deck of 502 guess cards with a set of taboo words, and a battery operated buzzer. The buzzer requires two AA batteries.</string>
+                                <color key="textColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TjP-Ux-tz8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="Wz2-bw-Ufz" id="DYr-0m-XOc"/>
+                        <outlet property="nextButton" destination="2tM-3O-ccg" id="Crk-Xk-c5q"/>
+                        <outlet property="pageLabel" destination="bl2-qa-vKb" id="M2G-Ns-vhQ"/>
+                        <outlet property="previousButton" destination="uM0-dv-BLz" id="VBI-X6-ooi"/>
+                        <outlet property="rulesView" destination="Adh-jU-Uif" id="fzo-dA-2XC"/>
+                        <outlet property="textField" destination="lXg-Vq-RKZ" id="vID-3i-xYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ond-R5-Wqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="101"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VRP-L0-sCO">
-            <objects>
-                <viewController id="UMy-jS-kSL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v7c-Da-kyw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uSI-DK-rpC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="58A-7N-Skx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1562" y="101"/>
+            <point key="canvasLocation" x="744.61538461538464" y="100.94786729857819"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Bachelorette-Taboo-Ladylike-Design-The-Craftables-Themed-Card-Games-for-ladies-night-customised-games" width="750" height="750"/>
         <image name="logoForMainScreen" width="1024" height="1024"/>
+        <image name="tabooLogo" width="425" height="550"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

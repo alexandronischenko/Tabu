@@ -8,14 +8,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                howToPlayButton.layer.cornerRadius = 10
+                howToPlayButton.layer.cornerRadius = 12
                 howToPlayButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
                 howToPlayButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
                 howToPlayButton.layer.shadowOpacity = 1.0
                 howToPlayButton.layer.shadowRadius = 1.0
                 howToPlayButton.layer.masksToBounds = false
         
-                playButton.layer.cornerRadius = 12
+                playButton.layer.cornerRadius = 14
                 playButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.45).cgColor
                 playButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.5)
                 playButton.layer.shadowOpacity = 1.0
