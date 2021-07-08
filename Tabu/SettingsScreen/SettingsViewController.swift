@@ -18,12 +18,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     
+    var playingWithCube: Bool = false
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    var numOfRounds: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
         
         viewConstraint.constant -= view.bounds.width
         buttonConstraint.constant -= view.bounds.width
@@ -34,7 +36,6 @@ class SettingsViewController: UIViewController {
         ViewSettings.layer.shadowOpacity = 1.0
         ViewSettings.layer.shadowRadius = 0.0
         ViewSettings.layer.masksToBounds = false
-        
         
         PlayButton.layer.cornerRadius = 25
         PlayButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
@@ -50,11 +51,16 @@ class SettingsViewController: UIViewController {
             
             let storyboard = UIStoryboard(name: "GameStoryboard", bundle: nil)
             guard let gameViewController = storyboard.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {return}
+            
             // MARK: - Data transfer
             
             gameViewController.firstTeamName = FirstPlayerNameField.text!
             gameViewController.secondTeamName = SecondPlayerNameField.text!
             gameViewController.playerTime = Int(TimeForGameInSeconds.text!) ?? 60
+            
+            // MARK: - TODO
+            //gameViewController.numOfRounds = numOfRounds
+            //gameViewController.playingWithCube = playingWithCube
             
             navigationController?.pushViewController(gameViewController , animated: true)
         }
@@ -98,6 +104,28 @@ class SettingsViewController: UIViewController {
 //        }
     }
     
+    @IBAction func chooseNumOfRounds(_ sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            numOfRounds = 1
+        case 1:
+            numOfRounds = 3
+        case 2:
+            numOfRounds = 5
+        default:
+            break
+        }
+    }
+    @IBAction func playCubeSwitch(_ sender: UISwitch) {
+        if sender.isOn{
+            playingWithCube = true
+        }
+        else{
+            playingWithCube = false
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
