@@ -95,8 +95,8 @@
                                     <action selector="nextAction:" destination="ERl-CM-tzU" eventType="touchUpInside" id="qQd-gY-T2I"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabooLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wz2-bw-Ufz">
-                                <rect key="frame" x="60" y="166" width="270" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabooLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wz2-bw-Ufz">
+                                <rect key="frame" x="33" y="126" width="324" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uM0-dv-BLz">
@@ -133,13 +133,13 @@
                                 <color key="backgroundColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXg-Vq-RKZ">
-                                <rect key="frame" x="16" y="362" width="358" height="201"/>
+                                <rect key="frame" x="16" y="393" width="358" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Overview: 
 Taboo is a verbal game played with two teams of three players or more, a deck of 502 guess cards with a set of taboo words, and a battery operated buzzer. The buzzer requires two AA batteries.</string>
                                 <color key="textColor" red="0.25283230820000002" green="0.34113532749999997" blue="0.56499677839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
