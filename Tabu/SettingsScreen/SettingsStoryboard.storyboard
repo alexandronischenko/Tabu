@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-an-v5R">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-an-v5R">
                                 <rect key="frame" x="25" y="103" width="340" height="520"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUd-mP-GpI">
                                         <rect key="frame" x="25" y="122" width="128" height="21"/>
@@ -70,10 +69,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.18039217590000001" green="0.2588235438" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFI-hZ-vgP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFI-hZ-vgP">
                                 <rect key="frame" x="129" y="648" width="132" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.18039217590000001" green="0.2588235438" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="VxR-4L-8Yh"/>
+                                    <constraint firstAttribute="width" constant="132" id="okd-kd-KqL"/>
+                                </constraints>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
@@ -84,6 +86,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kFI-hZ-vgP" firstAttribute="top" secondItem="GKQ-an-v5R" secondAttribute="bottom" constant="25" id="0kq-VU-whg"/>
+                            <constraint firstItem="GKQ-an-v5R" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="3mn-5p-wAN"/>
+                            <constraint firstItem="kFI-hZ-vgP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="6Vq-wF-cDb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kFI-hZ-vgP" secondAttribute="bottom" constant="59" id="Jnj-f6-CL4"/>
+                            <constraint firstItem="GKQ-an-v5R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="59" id="MBN-L6-iMf"/>
+                            <constraint firstAttribute="bottom" secondItem="GKQ-an-v5R" secondAttribute="bottom" constant="221" id="OWp-QL-98J"/>
+                            <constraint firstItem="kFI-hZ-vgP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="129" id="Qtj-UU-SWa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kFI-hZ-vgP" secondAttribute="bottom" constant="59" id="RPq-2Z-nQB"/>
+                            <constraint firstItem="GKQ-an-v5R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="TS3-MC-MtT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kFI-hZ-vgP" secondAttribute="trailing" constant="129" id="aVL-yS-V4L"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="FirstPlayerNameField" destination="X4Q-zq-MMX" id="RKe-3z-2UF"/>
@@ -91,6 +105,8 @@
                         <outlet property="SecondPlayerNameField" destination="ZOv-fi-XfV" id="64t-Lx-LPm"/>
                         <outlet property="TimeForGameInSeconds" destination="m49-Ng-1Ib" id="Z9r-w4-zN2"/>
                         <outlet property="ViewSettings" destination="GKQ-an-v5R" id="ctx-xJ-EgY"/>
+                        <outlet property="buttonConstraint" destination="6Vq-wF-cDb" id="H5K-ny-Tgu"/>
+                        <outlet property="viewConstraint" destination="3mn-5p-wAN" id="0J0-xn-J39"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
