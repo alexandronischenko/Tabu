@@ -82,15 +82,18 @@ class GameViewController: UIViewController {
         } else {
             roundCount += 1
             timer.invalidate()
-            // MARK: navigate to Result Screen
-            /*
-            let resultScreen = storyboard?.instantiateViewController(identifier: "ResultScreen") as? ResultScreen
-            navigationController?.pushViewController(resultScreen, animated: true)
-            */
+            navigateToResultScreen()
         }
     }
     
-    
+    private func navigateToResultScreen() {
+        let storyboard = UIStoryboard(name: "ResultStoryboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        viewController.score1 = player1Score
+        viewController.score2 = player2Score
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true, completion: nil)
+    }
     private func showAlertView() {
         let alert = UIAlertController(title: "\(roundCount > 0 ? "Team 2" : "Team 1" )'s Turn", message: #"Click "START" to begin your round!"#, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "START", style: .default, handler: { [self] action in
