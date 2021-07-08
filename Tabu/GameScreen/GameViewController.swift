@@ -11,25 +11,18 @@ class GameViewController: UIViewController {
     // constants
     let PLAYERS_COUNT = 2
     private static let DEFAULT_CARD = ["-_-","-_-","-_-","-_-","-_-","-_-"]
-    @IBOutlet weak var player1NameLabel: UILabel!
     @IBOutlet weak var player1ScoreLabel: UILabel!
-    @IBOutlet weak var player2NameLabel: UILabel!
     @IBOutlet weak var player2ScoreLabel: UILabel!
     @IBOutlet weak var timeRemainingLabel: UILabel!
     @IBOutlet weak var mainCardWordLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - variables that must be passed from settings screen
-    
-    var player1Name: String?
-    
-    var player2Name: String?
-    
     var playerTime: Int?
     
     
     // MARK: - Timer objects
-    private var timer: Timer!
+    private weak var timer: Timer!
     
     private var timeRemaining: Int!
     
@@ -52,13 +45,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         test()
-        if let player1Name = player1Name,
-           let player2Name = player2Name,
-           let playerTime = playerTime {
-            player1NameLabel.text = player1Name
+        if let playerTime = playerTime {
             player1ScoreLabel.text = String(player1Score)
             player2ScoreLabel.text = String(player2Score)
-            player2NameLabel.text = player2Name
             timeRemainingLabel.text = "\(playerTime)"
             mainCardWordLabel.text = currentCard[0]
         } else {
@@ -103,7 +92,7 @@ class GameViewController: UIViewController {
     
     
     private func showAlertView() {
-        let alert = UIAlertController(title: "\(roundCount > 0 ? player2Name! : player1Name! )'s Turn", message: #"Click "START" to begin your round!"#, preferredStyle: .alert)
+        let alert = UIAlertController(title: "\(roundCount > 0 ? "Team 2" : "Team 1" )'s Turn", message: #"Click "START" to begin your round!"#, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "START", style: .default, handler: { [self] action in
             if action.style == .default {
                 // start pressed
@@ -125,11 +114,11 @@ class GameViewController: UIViewController {
             var score: Int
             let label: UILabel
             if roundCount == 1 {
-                player1Score += 10
+                player1Score += 1
                 score = player1Score
                 label = player1ScoreLabel
             } else {
-                player2Score += 10
+                player2Score += 1
                 score = player2Score
                 label = player2ScoreLabel
             }
@@ -139,7 +128,7 @@ class GameViewController: UIViewController {
             return
         }
     }
-    @IBAction func onWrongPressed(_ sender: Any) {
+    @IBAction func onFailedPressed(_ sender: Any) {
         guard roundCount > 2 || roundCount < 1 else {
             var opponentScore: Int
             let opponentLabel: UILabel
@@ -159,13 +148,17 @@ class GameViewController: UIViewController {
             return
         }
     }
+    @IBAction func onSkipPressed(_ sender: Any) {
+        guard roundCount > 2 || roundCount < 1 else {
+            updateCurrentCard()
+            return
+        }
+    }
     
     //************
     // MOCK: mocking input variables from settings screen
     private func test() {
         self.playerTime = 10
-        self.player1Name = "Evans"
-        self.player2Name = "Collins"
     }
 }
 
