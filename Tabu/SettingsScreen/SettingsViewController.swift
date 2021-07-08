@@ -15,11 +15,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var SecondPlayerNameField: UITextField!
     @IBOutlet weak var TimeForGameInSeconds: UITextField!
     
-
+    @IBOutlet weak var viewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        viewConstraint.constant -= view.bounds.width
+        buttonConstraint.constant -= view.bounds.width
+        
         ViewSettings.layer.cornerRadius = 25
         ViewSettings.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         ViewSettings.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -34,37 +39,60 @@ class SettingsViewController: UIViewController {
         PlayButton.layer.shadowOpacity = 1.0
         PlayButton.layer.shadowRadius = 0.0
         PlayButton.layer.masksToBounds = false
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Navigation to GameViewController
     @IBAction func PlayButtonAction(_ sender: Any) {
         if(FirstPlayerNameField.hasText && SecondPlayerNameField.hasText && TimeForGameInSeconds.hasText){
-//
-//            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
-//
-// MARK: - Data transfer
-//            gameViewController.player1Name = FirstPlayerNameField.text
-//            gameViewController.player2Name = SecondPlayerNameField.text
-//            gameViewController.playerTime = TimeForGameInSeconds.text
-//
-//            navigationController?.pushViewController(GameViewController , animated: true)
+            //
+            //            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
+            //
+            // MARK: - Data transfer
+            //            gameViewController.player1Name = FirstPlayerNameField.text
+            //            gameViewController.player2Name = SecondPlayerNameField.text
+            //            gameViewController.playerTime = TimeForGameInSeconds.text
+            //
+            //            navigationController?.pushViewController(GameViewController , animated: true)
         }
         else{
             // MARK: - Error Alert
             let alert = UIAlertController(title: "Error", message: "You have not entered data", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                  switch action.style{
-                  case .default:
-                        print("default")
-                  case .cancel:
-                        print("cancel")
-                  case .destructive:
-                        print("destructive")
-                  @unknown default:
-                    fatalError()
-                  }}))
+                                            switch action.style{
+                                            case .default:
+                                                print("default")
+                                            case .cancel:
+                                                print("cancel")
+                                            case .destructive:
+                                                print("destructive")
+                                            @unknown default:
+                                                fatalError()
+                                            }}))
             self.present(alert, animated: true)
         }
+    }
+    
+    var animationPerformedOnce = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !animationPerformedOnce {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.buttonConstraint.constant += self.view.bounds.width
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.viewConstraint.constant += self.view.bounds.width
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+            
+            animationPerformedOnce = true
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
