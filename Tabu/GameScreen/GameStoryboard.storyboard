@@ -14,16 +14,16 @@
         <!--Game View Controller-->
         <scene sceneID="RRC-Ot-eq3">
             <objects>
-                <viewController id="W1z-sW-hte" customClass="GameViewController" customModule="GameScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W1z-sW-hte" customClass="GameViewController" customModule="Tabu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Yi-3r-cOo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vE5-kO-oYR" customClass="RoundedUIView" customModule="GameScreen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-0.3333333333333286" width="390" height="150.33333333333331"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vE5-kO-oYR" customClass="RoundedUIView" customModule="Tabu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-10.333333333333332" width="390" height="160.33333333333331"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150.5" id="eym-j6-VcR"/>
+                                    <constraint firstAttribute="height" constant="160" id="eym-j6-VcR"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -68,10 +68,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-TQ-msh">
-                                <rect key="frame" x="22" y="704" width="346" height="76"/>
+                                <rect key="frame" x="22" y="699.33333333333337" width="346" height="80.666666666666629"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-4k-fmu" customClass="RoundedUIButton" customModule="GameScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="76"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-4k-fmu" customClass="RoundedUIButton" customModule="Tabu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="80.666666666666671"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="29"/>
@@ -91,8 +91,8 @@
                                             <action selector="onSkipPressed:" destination="W1z-sW-hte" eventType="touchUpInside" id="to9-ro-Qlg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS1-Z1-Jc1" customClass="RoundedUIButton" customModule="GameScreen" customModuleProvider="target">
-                                        <rect key="frame" x="118" y="0.0" width="110" height="76"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS1-Z1-Jc1" customClass="RoundedUIButton" customModule="Tabu" customModuleProvider="target">
+                                        <rect key="frame" x="118" y="0.0" width="110" height="80.666666666666671"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="29"/>
@@ -112,8 +112,8 @@
                                             <action selector="onFailedPressed:" destination="W1z-sW-hte" eventType="touchUpInside" id="E56-KU-1Oo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-SD-RSK" customClass="RoundedUIButton" customModule="GameScreen" customModuleProvider="target">
-                                        <rect key="frame" x="236" y="0.0" width="110" height="76"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-SD-RSK" customClass="RoundedUIButton" customModule="Tabu" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="0.0" width="110" height="80.666666666666671"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
@@ -133,7 +133,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-me-VMb">
-                                <rect key="frame" x="50" y="180" width="290" height="494"/>
+                                <rect key="frame" x="50" y="184.99999999999997" width="290" height="484.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agj-cZ-C6K">
                                         <rect key="frame" x="115.33333333333336" y="20" width="59.666666666666671" height="28.666666666666671"/>
@@ -141,8 +141,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Gl-iE-cwL">
-                                        <rect key="frame" x="20" y="73.666666666666657" width="250" height="400.33333333333337"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Gl-iE-cwL">
+                                        <rect key="frame" x="20" y="74" width="250" height="330"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexBackgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,7 +180,7 @@
                                     <constraint firstAttribute="trailing" secondItem="6Gl-iE-cwL" secondAttribute="trailing" constant="20" id="JoL-Sz-SLw"/>
                                     <constraint firstItem="Agj-cZ-C6K" firstAttribute="centerX" secondItem="bgH-me-VMb" secondAttribute="centerX" id="Z6T-26-d1m"/>
                                     <constraint firstItem="6Gl-iE-cwL" firstAttribute="centerX" secondItem="bgH-me-VMb" secondAttribute="centerX" id="Zru-Z2-eJq"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Gl-iE-cwL" secondAttribute="bottom" constant="20" id="dpW-7z-Bh0"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Gl-iE-cwL" secondAttribute="bottom" id="dpW-7z-Bh0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -218,16 +218,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstTeamNameLabel" destination="Gac-7U-Ts6" id="fBx-gK-uJy"/>
+                        <outlet property="gameView" destination="bgH-me-VMb" id="xJ8-dl-eeM"/>
                         <outlet property="mainCardWordLabel" destination="Agj-cZ-C6K" id="uSx-pi-HPk"/>
                         <outlet property="player1ScoreLabel" destination="f0F-Dv-j8L" id="tD7-Ao-GQP"/>
                         <outlet property="player2ScoreLabel" destination="pkI-7y-JIN" id="u5S-Q3-POs"/>
+                        <outlet property="secondTeamNameLabel" destination="kzg-JS-kIc" id="JFx-Bt-Xlj"/>
                         <outlet property="tableView" destination="6Gl-iE-cwL" id="cu3-Z4-2gO"/>
                         <outlet property="timeRemainingLabel" destination="9OH-eX-93C" id="KVb-p0-9EM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbM-dA-cqB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-331" y="9"/>
+            <point key="canvasLocation" x="-332.30769230769232" y="8.5308056872037916"/>
         </scene>
     </scenes>
     <designables>

@@ -22,6 +22,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
         viewConstraint.constant -= view.bounds.width
         buttonConstraint.constant -= view.bounds.width
         
@@ -44,15 +47,16 @@ class SettingsViewController: UIViewController {
     // MARK: - Navigation to GameViewController
     @IBAction func PlayButtonAction(_ sender: Any) {
         if(FirstPlayerNameField.hasText && SecondPlayerNameField.hasText && TimeForGameInSeconds.hasText){
-            //
-            //            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
-            //
+            
+            let storyboard = UIStoryboard(name: "GameStoryboard", bundle: nil)
+            guard let gameViewController = storyboard.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {return}
             // MARK: - Data transfer
-            //            gameViewController.player1Name = FirstPlayerNameField.text
-            //            gameViewController.player2Name = SecondPlayerNameField.text
-            //            gameViewController.playerTime = TimeForGameInSeconds.text
-            //
-            //            navigationController?.pushViewController(GameViewController , animated: true)
+            
+            gameViewController.firstTeamName = FirstPlayerNameField.text!
+            gameViewController.secondTeamName = SecondPlayerNameField.text!
+            gameViewController.playerTime = Int(TimeForGameInSeconds.text!) ?? 60
+            
+            navigationController?.pushViewController(gameViewController , animated: true)
         }
         else{
             // MARK: - Error Alert
@@ -77,19 +81,21 @@ class SettingsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !animationPerformedOnce {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.buttonConstraint.constant += self.view.bounds.width
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.viewConstraint.constant += self.view.bounds.width
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-            
-            animationPerformedOnce = true
-        }
+        
+        //MARK: - Animations for views
+//        if !animationPerformedOnce {
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+//                self.buttonConstraint.constant += self.view.bounds.width
+//                self.view.layoutIfNeeded()
+//            }, completion: nil)
+//
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+//                self.viewConstraint.constant += self.view.bounds.width
+//                self.view.layoutIfNeeded()
+//            }, completion: nil)
+//
+//            animationPerformedOnce = true
+//        }
     }
     
     override func didReceiveMemoryWarning() {

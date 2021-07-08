@@ -13,14 +13,14 @@ protocol Rounded {
 }
 
 @IBDesignable public class RoundedUIButton: UIButton, Rounded {
-
+    
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = cornerRadius > 0
         }
     }
-
+    
 }
 
 @IBDesignable public class RoundedUIView: UIView, Rounded {
