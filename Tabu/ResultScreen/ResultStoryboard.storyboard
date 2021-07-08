@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,7 +12,7 @@
             <objects>
                 <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ResultViewController" customModule="Tabu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-Oc-OSh">
@@ -112,12 +110,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="name1Label" destination="Gms-qG-Hcl" id="UBi-of-2mD"/>
-                        <outlet property="name2Label" destination="NLj-Xx-wA6" id="blF-jt-rZo"/>
                         <outlet property="okButton" destination="cgI-mX-o45" id="q5t-Ad-9in"/>
                         <outlet property="okView" destination="HIn-1O-EeY" id="P3Q-Bf-NRj"/>
                         <outlet property="score1Label" destination="Pi0-zR-cWX" id="yX0-ex-960"/>
                         <outlet property="score2Label" destination="axS-hc-KfP" id="SnE-fM-nT2"/>
+                        <outlet property="team1Label" destination="Gms-qG-Hcl" id="UBi-of-2mD"/>
+                        <outlet property="team2Label" destination="NLj-Xx-wA6" id="blF-jt-rZo"/>
                         <outlet property="winnerNameLabel" destination="Muv-yH-YFr" id="aLd-fi-C31"/>
                         <outlet property="winnerStatusLabel" destination="7zs-rY-pcs" id="klv-Kq-88O"/>
                         <outlet property="winnerView" destination="jcq-Oc-OSh" id="vhD-nc-3iD"/>

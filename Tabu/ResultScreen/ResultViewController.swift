@@ -12,8 +12,8 @@ class ResultViewController: UIViewController {
     
     var score1: Int?
     var score2: Int?
-    var name1: String?
-    var name2: String?
+    var team1: String?
+    var team2: String?
     
    
     @IBOutlet weak var okView: UIView!
@@ -27,11 +27,11 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var winnerStatusLabel: UILabel!
     
     
-    @IBOutlet weak var name1Label: UILabel!
+    @IBOutlet weak var team1Label: UILabel!
     
     @IBOutlet weak var score1Label: UILabel!
     
-    @IBOutlet weak var name2Label: UILabel!
+    @IBOutlet weak var team2Label: UILabel!
     
     @IBOutlet weak var score2Label: UILabel!
     
@@ -49,16 +49,16 @@ class ResultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if score1! > score2! {
-            winnerNameLabel.text = name1!
+            winnerNameLabel.text = team1!
         } else if score1! == score2! {
             winnerStatusLabel.text = "Ничья"
             winnerNameLabel.text = nil
         } else {
-            winnerNameLabel.text = name2!
+            winnerNameLabel.text = team2!
         }
-        name1Label.text = name1!
+        team1Label.text = team1!
         score1Label.text = String(score1!)
-        name2Label.text = name2!
+        team2Label.text = team2!
         score2Label.text = String(score2!)
 
     }
