@@ -41,12 +41,12 @@ class ResultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if score1! > score2! {
-            winnerNameLabel.text = "team1!"
+            winnerNameLabel.text = team1
         } else if score1! == score2! {
             winnerStatusLabel.text = "Ничья"
             winnerNameLabel.text = nil
         } else {
-            winnerNameLabel.text = "team2!"
+            winnerNameLabel.text = team2
         }
         team1Label.text = team1!
         score1Label.text = String(score1!)
