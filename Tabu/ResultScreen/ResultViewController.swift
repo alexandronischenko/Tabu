@@ -43,7 +43,7 @@ class ResultViewController: UIViewController {
         if score1! > score2! {
             winnerNameLabel.text = team1
         } else if score1! == score2! {
-            winnerStatusLabel.text = "Ничья"
+            winnerStatusLabel.text = "Friendship wins"
             winnerNameLabel.text = nil
         } else {
             winnerNameLabel.text = team2
