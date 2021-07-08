@@ -37,7 +37,8 @@ class InfoViewController: UIViewController {
         rulesView.layer.shadowRadius = 1.0
         rulesView.layer.masksToBounds = false
         
-        textField.font = UIFont(name: "Marker Felt", size: 14.0)
+        //textField.font = UIFont(name: "", size: 16.0)
+        imageView.layer.cornerRadius = 10
         
         pageLabel.text = "1/5"
     }
