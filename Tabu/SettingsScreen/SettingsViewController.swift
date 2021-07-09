@@ -57,10 +57,8 @@ class SettingsViewController: UIViewController {
             gameViewController.firstTeamName = FirstPlayerNameField.text!
             gameViewController.secondTeamName = SecondPlayerNameField.text!
             gameViewController.playerTime = Int(TimeForGameInSeconds.text!) ?? 60
-            
-            // MARK: - TODO
-            //gameViewController.numOfRounds = numOfRounds
-            //gameViewController.playingWithCube = playingWithCube
+            gameViewController.numberOfRounds = numOfRounds
+            gameViewController.playingWithCube = playingWithCube
             
             navigationController?.pushViewController(gameViewController , animated: true)
         }

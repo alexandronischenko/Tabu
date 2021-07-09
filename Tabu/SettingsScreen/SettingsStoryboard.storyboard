@@ -80,7 +80,6 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="playCubeSwitch:" destination="Y6W-OH-hqX" eventType="valueChanged" id="0CX-P4-ncC"/>
-                                            <action selector="playingWithACubeSwitch:" destination="Y6W-OH-hqX" eventType="valueChanged" id="EvU-Bw-Q5S"/>
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sab-3y-c5q">
