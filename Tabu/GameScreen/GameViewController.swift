@@ -202,9 +202,8 @@ class GameViewController: UIViewController {
         viewController.score2 = player2Score
         viewController.team1 = firstTeamName
         viewController.team2 = secondTeamName
-        
-        //MARK: TODO
-//        viewController.numberOfRounds = numberOfRounds
+        viewController.cubic = roundCube
+        viewController.numberOfRounds = numberOfRounds
 
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController , animated: true)

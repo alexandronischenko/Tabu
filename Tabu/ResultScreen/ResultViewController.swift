@@ -13,7 +13,10 @@ class ResultViewController: UIViewController {
     var score2: Int?
     var team1: String?
     var team2: String?
+    var cubic: Cubic?
+    var numberOfRounds: Int?
     
+    @IBOutlet weak var roundsCountLabel: UILabel!
     @IBOutlet weak var okView: UIView!
     @IBOutlet weak var okButton: UIButton!
     
@@ -21,6 +24,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var winnerNameLabel: UILabel!
     @IBOutlet weak var winnerStatusLabel: UILabel!
     
+    @IBOutlet weak var gameModeLabel: UILabel!
     
     @IBOutlet weak var team1Label: UILabel!
     @IBOutlet weak var score1Label: UILabel!
@@ -52,6 +56,8 @@ class ResultViewController: UIViewController {
         score1Label.text = String(score1!)
         team2Label.text = team2!
         score2Label.text = String(score2!)
+        loadGameModeText(cubic: cubic)
+        roundsCountLabel.text = String(reflecting: numberOfRounds!)
         
     }
     
@@ -72,6 +78,23 @@ class ResultViewController: UIViewController {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowRadius = 10.0
         view.layer.shadowOpacity = 0.4
+    }
+    
+    private func loadGameModeText(cubic: Cubic?){
+        switch cubic {
+        case .allPlay:
+            gameModeLabel.text = "All play"
+        case .classicRules:
+            gameModeLabel.text = "Classic rules"
+        case .doubleTime:
+            gameModeLabel.text = "Double time"
+        case .dontMove:
+            gameModeLabel.text = "Don't move"
+        case .oneGuessing:
+            gameModeLabel.text = "One guessing"
+        case .none:
+            gameModeLabel.text = ""
+        }
     }
     
     /*
