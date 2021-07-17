@@ -41,6 +41,7 @@
 		A2C173E92693713A00FBD8EC /* GameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
 		A2C173EB2693714800FBD8EC /* ResultStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultStoryboard.storyboard; sourceTree = "<group>"; };
 		A2C173ED2693739300FBD8EC /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		B91D3F5526A33F1D00C5CD58 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B96677EE2694AE7B0096E66B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B96677F02694B0070096E66B /* RoundedUIViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedUIViews.swift; sourceTree = "<group>"; };
 		B96677F12694B0070096E66B /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		A2C173C026936FA800FBD8EC = {
 			isa = PBXGroup;
 			children = (
+				B91D3F5526A33F1D00C5CD58 /* README.md */,
 				A2C173CB26936FA800FBD8EC /* Tabu */,
 				A2C173CA26936FA800FBD8EC /* Products */,
 			);
